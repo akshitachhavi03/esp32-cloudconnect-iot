@@ -23,12 +23,22 @@ void setup() {
 
   HTTPClient http;
 
-  http.begin("http://worldtimeapi.org/api/ip");
+  // Public API
+  http.begin("http://httpbin.org/get");
 
   int httpResponseCode = http.GET();
 
   Serial.print("HTTP Response Code: ");
   Serial.println(httpResponseCode);
+
+  if (httpResponseCode > 0) {
+    String response = http.getString();
+
+    Serial.println("Server Response:");
+    Serial.println(response);
+  } else {
+    Serial.println("Failed to make GET request");
+  }
 
   http.end();
 }
