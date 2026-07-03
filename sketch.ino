@@ -1,4 +1,5 @@
 #include <WiFi.h>
+#include <HTTPClient.h>
 
 const char* ssid = "Wokwi-GUEST";
 const char* password = "";
@@ -19,6 +20,17 @@ void setup() {
   Serial.println("WiFi Connected!");
   Serial.print("IP Address: ");
   Serial.println(WiFi.localIP());
+
+  HTTPClient http;
+
+  http.begin("http://worldtimeapi.org/api/ip");
+
+  int httpResponseCode = http.GET();
+
+  Serial.print("HTTP Response Code: ");
+  Serial.println(httpResponseCode);
+
+  http.end();
 }
 
 void loop() {
