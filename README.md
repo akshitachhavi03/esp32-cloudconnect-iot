@@ -1,21 +1,24 @@
 # ESP32 CloudConnect IoT
 
-A simple ESP32 IoT project demonstrating WiFi connectivity and HTTP GET requests using Wokwi and Arduino.
+The ESP32 CloudConnect IoT project demonstrates seamless WiFi connectivity and cloud communication using HTTP GET requests. It connects an ESP32 development board to a wireless network, retrieves data from a public REST API and displays the server response through the Serial Monitor. Developed with PlatformIO and simulated using Wokwi, the project showcases real-time interaction between embedded devices and cloud services.
 
-## Features
-- ESP32 WiFi Connection
-- HTTP GET Request
-- Serial Monitor Output
-- Wokwi Simulation
+## Tech Stack
 
-## Technologies Used
 - ESP32 DevKit V1
-- WiFi Library
-- HTTPClient
+- PlatformIO
 - Wokwi Simulator
+- WiFi Library
+- HTTPClient Library
 
-## How to Run
-1. Open the project in VS Code.
-2. Run it using Wokwi Simulator.
-3. Connect to the default Wokwi WiFi.
-4. View the HTTP response in the Serial Monitor.
+
+## Resources
+
+- Wokwi Simulation: <https://wokwi.com/projects/468551152781258753>
+- PlatformIO Documentation: https://docs.platformio.org/
+
+
+## Status
+
+- WiFi Connectivity
+- HTTP GET Request
+- Cloud Response Handling
